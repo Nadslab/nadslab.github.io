@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Research — Pier-Luc Nadeau-Labadie</title>
+<meta name="description" content="Research on multimodal process monitoring, virtual sensing for welding, and robot learning for manufacturing.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500&display=swap">
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap">
+    <a class="monogram" href="../index.html">PNL<span>.</span></a>
+    <nav class="navlinks">
+      <a href="../projects/index.html">Projects</a>
+      <a href="index.html" aria-current="page">Research</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="toggle" id="themeToggle" type="button" aria-label="Switch colour theme">
+      <svg class="ico-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+      <svg class="ico-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path></svg>
+      <span id="themeLabel">Dark</span>
+    </button>
+  </div>
+</header>
+
+<main id="top">
+
+  <div class="wrap pageHead">
+    <h1>Research</h1>
+    <p class="standfirst">Most of what I work on comes back to one question: how much can you learn about a physical process from the signals it gives off while it runs, rather than from destroying the part afterward.</p>
+  </div>
+
+  <!-- ============================================================
+       EDIT: RESEARCH ENTRIES
+       One <article class="entry"> per thread. Plain paragraphs —
+       this page is meant to be read, not scanned.
+       ============================================================ -->
+  <section class="wrap">
+
+    <article class="entry">
+      <h3>Virtual sensing for friction stir spot welding</h3>
+      <p>Thesis work in <a href="https://engineering.purdue.edu/MMRL" target="_blank" rel="noopener">Prof. Martin Jun's Multiscale Manufacturing Research Laboratory</a>. Weld quality is normally confirmed by sectioning the weld and measuring it — which destroys the part and tells you nothing in real time. The question is whether the geometry that determines joint strength can be predicted instead, from signals available while the weld is being made.</p>
+      <p>The experimental base is a 27-run full-factorial design over plunge depth, spindle speed, and dwell time on AA6061-T6, with acoustic, machine-controller, and surface-profilometry data captured for every run. The modelling approach is a screened hybrid: regression on the process parameters first, then sparse selection over sensor features against the residual — so the sensors only earn their place where the parameters alone fall short. Validation is leave-one-out cross-validation against a response-surface baseline.</p>
+      <p>A second thread treats the weld acoustically as a sequence rather than a single event, classifying plunge, dwell, and retract stages from audio alone so the process can be segmented in real time.</p>
+    </article>
+
+    <article class="entry">
+      <h3>Robot learning for manufacturing cells</h3>
+      <p>Volunteer work with <a href="https://engineering.purdue.edu/MARSLab" target="_blank" rel="noopener">Prof. Yu She's group</a> on vision-language-action models, and on world models that take video as input.</p>
+      <p>The interest is practical rather than general: setting up a new robotic cell is expensive mostly because of the programming and teaching time, and contact-rich tasks — insertion, screwdriving, anything with compliance in it — are exactly where hand-written motion planning is weakest. If learned policies can shorten the path from "new part" to "cell running," that changes the economics of small-batch and reconfigurable manufacturing more than faster hardware would.</p>
+    </article>
+
+    <article class="entry">
+      <h3>Multimodal process monitoring</h3>
+      <p>The broader thread underneath both of the above. Manufacturing processes emit far more than they are usually asked about — sound, vibration, current draw, thermal signature, surface texture — and most of it goes unrecorded. The interesting problems are in fusing those channels into something that holds up statistically, and in knowing when a sensor is genuinely adding information rather than fitting noise.</p>
+    </article>
+
+  </section>
+
+  <footer class="wrap" id="contact">
+    <h2 class="sectionHead">Contact</h2>
+    <dl class="contact">
+      <div class="contactRow">
+        <dt>X</dt>
+        <dd><a href="https://x.com/PLNadslab" target="_blank" rel="noopener">@PLNadslab</a></dd>
+      </div>
+      <div class="contactRow">
+        <dt>GitHub</dt>
+        <dd><a href="https://github.com/nadslab" target="_blank" rel="noopener">github.com/nadslab</a></dd>
+      </div>
+      <div class="contactRow">
+        <dt>Location</dt>
+        <dd>West Lafayette, Indiana</dd>
+      </div>
+    </dl>
+    <p class="colophon">Set in Archivo and IBM Plex. Built and hosted on GitHub Pages.</p>
+  </footer>
+
+</main>
+
+</body>
+</html>
