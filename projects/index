@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Projects — Pier-Luc Nadeau-Labadie</title>
+<meta name="description" content="Robotics and manufacturing projects: drone assembly line automation, weld virtual sensing, wafer fab digital twin, autonomous rover, bimanual manipulation.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500&display=swap">
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap">
+    <a class="monogram" href="../index.html">PNL<span>.</span></a>
+    <nav class="navlinks">
+      <a href="index.html" aria-current="page">Projects</a>
+      <a href="../research/index.html">Research</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="toggle" id="themeToggle" type="button" aria-label="Switch colour theme">
+      <svg class="ico-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+      <svg class="ico-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path></svg>
+      <span id="themeLabel">Dark</span>
+    </button>
+  </div>
+</header>
+
+<main id="top">
+
+  <div class="wrap pageHead">
+    <h1>Projects</h1>
+    <p class="standfirst">Automation, robot control, and manufacturing systems — from analog sensing circuits through to full production lines.</p>
+  </div>
+
+  <!-- ============================================================
+       EDIT: PROJECTS
+       One <article class="item"> per project. Inside each:
+         id          = the anchor the home page links to
+         h3          = project name
+         .status     = the pill. Add class "quiet" for grey.
+         .spec       = the mono stat strip
+         .bullets    = max 3 <li>, one line each
+         .links      = <a> for real links, <span> for "Private"
+       ============================================================ -->
+  <section class="wrap">
+    <div class="work">
+
+      <article class="item" id="drone-line">
+        <div class="itemHead">
+          <h3>FPV Drone Assembly Line</h3>
+          <span class="status">In progress</span>
+        </div>
+        <p class="spec">MASTER'S CAPSTONE · ROS 2 · GAZEBO · SOLO</p>
+        <ul class="bullets">
+          <li>Designing a drone assembly line for production volume, not demonstration.</li>
+          <li>Covers line architecture, throughput modelling, motion planning, and PLC integration.</li>
+          <li>Design for manufacturability so RF hardware can be swapped without re-tooling.</li>
+        </ul>
+        <div class="links">
+          <a href="https://github.com/Nadslab/drone-assembly-line" target="_blank" rel="noopener">GitHub</a>
+        </div>
+      </article>
+
+      <article class="item" id="fssw">
+        <div class="itemHead">
+          <h3>FSSW Virtual Sensing &amp; Digital Twin</h3>
+          <span class="status">Research</span>
+        </div>
+        <p class="spec">PURDUE MMRL · 27-RUN FULL-FACTORIAL DOE · AA6061-T6</p>
+        <ul class="bullets">
+          <li>Predicts weld geometry from sensor data, replacing destructive sectioning.</li>
+          <li>Screened hybrid regression pipeline, validated by leave-one-out cross-validation against an RSM baseline.</li>
+          <li>Audio-only classifier segments each weld into process stages in real time.</li>
+        </ul>
+        <div class="links">
+          <a href="https://github.com/nadslab/fssw-model-digital-twin" target="_blank" rel="noopener">GitHub</a>
+          <span>Dashboard — soon</span>
+        </div>
+      </article>
+
+      <article class="item" id="wafer-fab">
+        <div class="itemHead">
+          <h3>Wafer Fab Digital Twin</h3>
+          <span class="status quiet">Complete</span>
+        </div>
+        <p class="spec">IE 574 · COPPELIASIM · 6-PERSON TEAM · 16/16 DEFECTS CAUGHT</p>
+        <ul class="bullets">
+          <li>Full front-end semiconductor line as one coordinated cell: hoist transport, KUKA handler, four process stations, vision metrology.</li>
+          <li>Subsystems talk only through a shared signal vocabulary — a stripped-down SECS/GEM handshake — so six stations were built in parallel.</li>
+          <li>I engineered the oven station and its coordination with the central handler.</li>
+        </ul>
+        <div class="links">
+          <a href="https://github.com/nadslab/wafer-fab-digital-twin" target="_blank" rel="noopener">GitHub</a>
+        </div>
+      </article>
+
+      <article class="item" id="battlebus">
+        <div class="itemHead">
+          <h3>BattleBus — Autonomous Competition Rover</h3>
+          <span class="status quiet">Complete</span>
+        </div>
+        <p class="spec">ME 588 · 2× ARDUINO MEGA · 6 HC-SR04 · 6/6 OBJECTIVES MET</p>
+        <ul class="bullets">
+          <li>Wall-follows an unmapped arena, tells friendly beacons from enemy, delivers payloads — no operator input.</li>
+          <li>I owned the electrical design and sensing stack, including a custom IR beacon circuit that turns a noisy optical signal into clean logic.</li>
+          <li>Calibration work set the system's error budget and decided which sensors were trusted.</li>
+        </ul>
+        <div class="links">
+          <a href="https://github.com/nadslab/battlebus-autonomous-rover" target="_blank" rel="noopener">GitHub</a>
+        </div>
+      </article>
+
+      <article class="item" id="guard-iam">
+        <div class="itemHead">
+          <h3>GUARD.IAM — Bimanual Manipulation</h3>
+          <span class="status">Ongoing</span>
+        </div>
+        <p class="spec">ROS 2 JAZZY · LEROBOT · ACT POLICY · DUAL SO-101</p>
+        <ul class="bullets">
+          <li>Holonomic mecanum rover with dual SO-101 arms, built by a Purdue student team and sponsored by AMD.</li>
+          <li>I own the manipulation pipeline: teleoperated data collection through to on-device inference.</li>
+          <li>ACT policies trained with LeRobot on the university HPC cluster.</li>
+        </ul>
+        <div class="links">
+          <a href="https://github.com/nadslab/guard-iam-manipulation" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://github.com/PhillippGery/GUARD.IAM_AutomousRover" target="_blank" rel="noopener">Team repo</a>
+        </div>
+      </article>
+
+      <article class="item" id="guardian-bikes">
+        <div class="itemHead">
+          <h3>Guardian Bikes — Decal Line &amp; Frame Inspection</h3>
+          <span class="status quiet">Industry</span>
+        </div>
+        <p class="spec">SEYMOUR, IN · 2,000 FRAMES/DAY TARGET · OPENCV</p>
+        <ul class="bullets">
+          <li>Evaluated three high-volume architectures for automating graphic application on bike frames.</li>
+          <li>Built a takt-time and ink-cost model to drive the build decision.</li>
+          <li>Developed a stereo-vision system measuring graphic placement error on curved surfaces.</li>
+        </ul>
+        <div class="links">
+          <span>Private</span>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <footer class="wrap" id="contact">
+    <h2 class="sectionHead">Contact</h2>
+    <dl class="contact">
+      <div class="contactRow">
+        <dt>X</dt>
+        <dd><a href="https://x.com/PLNadslab" target="_blank" rel="noopener">@PLNadslab</a></dd>
+      </div>
+      <div class="contactRow">
+        <dt>GitHub</dt>
+        <dd><a href="https://github.com/nadslab" target="_blank" rel="noopener">github.com/nadslab</a></dd>
+      </div>
+      <div class="contactRow">
+        <dt>Location</dt>
+        <dd>West Lafayette, Indiana</dd>
+      </div>
+    </dl>
+    <p class="colophon">Set in Archivo and IBM Plex. Built and hosted on GitHub Pages.</p>
+  </footer>
+
+</main>
+
+</body>
+</html>
