@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Pier-Luc Nadeau-Labadie</title>
+<meta name="description" content="Robotics and manufacturing engineer at Purdue. High-volume automation, robot control, machine vision, and manufacturing systems.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500&display=swap">
+<link rel="stylesheet" href="assets/style.css">
+<script src="assets/theme.js"></script>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap">
+    <a class="monogram" href="index.html">PNL<span>.</span></a>
+    <nav class="navlinks">
+      <a href="projects/index.html">Projects</a>
+      <a href="research/index.html">Research</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="toggle" id="themeToggle" type="button" aria-label="Switch colour theme">
+      <svg class="ico-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+      <svg class="ico-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path></svg>
+      <span id="themeLabel">Dark</span>
+    </button>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ============================================================
+       EDIT: HERO
+       .thesis = the one big line. Wrap words in <em>…</em> for amber.
+       .lede   = the supporting paragraph underneath.
+       ============================================================ -->
+  <div class="wrap hero">
+    <div class="heroTop">
+      <div class="plate" aria-hidden="true">PNL</div>
+      <div class="heroText">
+        <p class="eyebrow">Purdue University · Robotics &amp; Manufacturing</p>
+        <h1>Pier-Luc Nadeau-Labadie</h1>
+        <p class="thesis">I build the machines that build things — <em>high-volume automation</em>, from the sensor circuit up to the production line.</p>
+        <p class="lede">Master's student at Purdue working across robot control, machine vision, and manufacturing systems. Research on multimodal weld monitoring in <a href="https://engineering.purdue.edu/MMRL" target="_blank" rel="noopener">Prof. Martin Jun's lab</a>; automation engineering at Guardian Bikes. Previously venture capital and technical due diligence on hardware and deep-tech companies — I came to engineering from the side that had to evaluate it.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       EDIT: CURRENTLY — one <p> per block, <strong> is the label
+       ============================================================ -->
+  <section class="wrap" id="currently">
+    <h2 class="sectionHead">Currently</h2>
+    <div class="now">
+      <p><strong>Building</strong>An automated assembly line for FPV drones as my master's capstone — a validated simulation of the full line plus one physical cell. The design problem is volume: making the line accept variable RF hardware without stopping to re-tool.</p>
+      <p><strong>Researching</strong>Virtual sensing for friction stir spot welding in <a href="https://engineering.purdue.edu/MMRL" target="_blank" rel="noopener">Prof. Martin Jun's lab</a>, predicting weld geometry from acoustics and machine data rather than cutting the weld open. Alongside that, automating graphic application and frame inspection at Guardian Bikes.</p>
+      <p><strong>Toward</strong>Building drones at volume in the US — the manufacturing side, not the airframe side. Eventually a vertically integrated company of my own.</p>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       EDIT: WORK TEASER
+       Short list only. Full write-ups live on projects/index.html.
+       ============================================================ -->
+  <section class="wrap" id="work">
+    <h2 class="sectionHead">Selected Work <a class="more" href="projects/index.html">All projects →</a></h2>
+    <div class="teaser">
+
+      <a class="teaserRow" href="projects/index.html#drone-line">
+        <span class="teaserName">FPV Drone Assembly Line</span>
+        <span class="teaserMeta">In progress</span>
+        <p class="teaserLine">An assembly line for drones built for production volume, not demonstration.</p>
+      </a>
+
+      <a class="teaserRow" href="projects/index.html#fssw">
+        <span class="teaserName">FSSW Virtual Sensing &amp; Digital Twin</span>
+        <span class="teaserMeta">Research</span>
+        <p class="teaserLine">Predicting weld geometry from sensor data instead of cutting the weld open.</p>
+      </a>
+
+      <a class="teaserRow" href="projects/index.html#wafer-fab">
+        <span class="teaserName">Wafer Fab Digital Twin</span>
+        <span class="teaserMeta">16/16 defects caught</span>
+        <p class="teaserLine">A semiconductor line simulated as one coordinated cell — transport, handling, metrology, routing.</p>
+      </a>
+
+      <a class="teaserRow" href="projects/index.html#battlebus">
+        <span class="teaserName">BattleBus — Autonomous Rover</span>
+        <span class="teaserMeta">6/6 objectives</span>
+        <p class="teaserLine">Custom analog beacon sensing and the electrical stack for a fully autonomous competition rover.</p>
+      </a>
+
+    </div>
+  </section>
+
+  <section class="wrap" id="capabilities">
+    <h2 class="sectionHead">Capabilities</h2>
+    <div class="caps">
+      <div class="capCol">
+        <h4>Robotics</h4>
+        <ul>
+          <li>ROS 2 (Jazzy, Humble)</li>
+          <li>Gazebo, CoppeliaSim, MuJoCo</li>
+          <li>MoveIt 2, OMPL motion planning</li>
+          <li>LeRobot, ACT imitation learning</li>
+          <li>6-DoF arms, SCARA, gantry systems</li>
+        </ul>
+      </div>
+      <div class="capCol">
+        <h4>Manufacturing</h4>
+        <ul>
+          <li>Design for manufacturability</li>
+          <li>Takt time &amp; throughput modelling</li>
+          <li>Discrete event simulation (AnyLogic)</li>
+          <li>PLC integration (CODESYS)</li>
+          <li>Design of experiments</li>
+        </ul>
+      </div>
+      <div class="capCol">
+        <h4>Sensing &amp; Electronics</h4>
+        <ul>
+          <li>Analog signal conditioning</li>
+          <li>KiCad, power distribution design</li>
+          <li>Stereo vision, OpenCV</li>
+          <li>Acoustic &amp; vibration monitoring</li>
+          <li>Sensor calibration &amp; error budgeting</li>
+        </ul>
+      </div>
+      <div class="capCol">
+        <h4>Software</h4>
+        <ul>
+          <li>Python, C++, Arduino</li>
+          <li>PyTorch, scikit-learn</li>
+          <li>Regression &amp; model validation</li>
+          <li>Linux, Slurm / HPC</li>
+          <li>Git</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDIT: CONTACT — this footer block is repeated on every page -->
+  <footer class="wrap" id="contact">
+    <h2 class="sectionHead">Contact</h2>
+    <dl class="contact">
+      <div class="contactRow">
+        <dt>X</dt>
+        <dd><a href="https://x.com/PLNadslab" target="_blank" rel="noopener">@PLNadslab</a></dd>
+      </div>
+      <div class="contactRow">
+        <dt>GitHub</dt>
+        <dd><a href="https://github.com/nadslab" target="_blank" rel="noopener">github.com/nadslab</a></dd>
+      </div>
+      <div class="contactRow">
+        <dt>Location</dt>
+        <dd>West Lafayette, Indiana</dd>
+      </div>
+    </dl>
+    <p class="colophon">Set in Archivo and IBM Plex. Built and hosted on GitHub Pages.</p>
+  </footer>
+
+</main>
+
+</body>
+</html>
