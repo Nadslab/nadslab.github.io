@@ -52,12 +52,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-off
   border-bottom:1px solid var(--rule);
 }
 .topbar .wrap{display:flex;align-items:center;gap:18px;padding-block:14px;}
-.monogram{
-  font-family:var(--mono);font-weight:500;font-size:.8rem;letter-spacing:.14em;
-  text-decoration:none;color:var(--text);white-space:nowrap;
-}
-.monogram span{color:var(--accent);}
-.navlinks{display:flex;gap:18px;margin-left:auto;flex-wrap:wrap;}
+.navlinks{display:flex;gap:18px;flex-wrap:wrap;}
 .navlinks a{
   font-family:var(--mono);font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;
   color:var(--muted);text-decoration:none;padding-block:2px;
@@ -67,6 +62,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-off
 .navlinks a[aria-current="page"]{color:var(--text);border-bottom-color:var(--accent-dim);}
 
 .toggle{
+  margin-left:auto;
   display:inline-flex;align-items:center;gap:7px;
   background:none;border:1px solid var(--rule);border-radius:999px;
   padding:5px 11px;cursor:pointer;color:var(--muted);
